@@ -3,10 +3,27 @@
 This repo contains information for metagenome datasets to be used in **Petabyte Scale Sequence Search: Metagenomics Benchmarking Codeathon** held on Sept. 27-Oct. 1. Included metageonmes are from three different environments (human gut, marine, and soil). Details of each dataset (eg. SRR, SRX ids, etc. when available) and their location in GCP and AWS bucket can be found in `data.tsv`.
 
 # Data processing
-All the metagenome dataset have been processed using NMDC metagenome workflow (https://github.com/microbiomedata/metaG).
+Raw files (*.sra) were obtained from sra using `sratoolkit` with following command:
+
+```
+prefetch $SRR
+```
+
+Then `fastq-dump` was used for extracting the paired reads with following command:
+
+```
+fastq-dump --gzip --clip --read-filter pass --outdir $OUTDIR --skip-technical --split-3 $SRR.sra
+```
+
+And, then interleaved files with `1` and `2` attended at the end of the read names were generated using:
+
+```
+reformat.sh in1=$SRR_1.fastq.gz in2=$SRR_2.fastq.gz out=$SRR.interleaved.fq.gz addslash int
+```
+All the metagenome datasets were then processed using NMDC metagenome workflow (https://github.com/microbiomedata/metaG). 
 
 ## Output Folder
-Folder names correspond to a NMDC specific id (For example `nmdc:mga00p32/`), within each folder there are specific subfolders (`qa`, `MAGs`, `ReadbasedAnalysis`, `annotation`, `assembly`) associated with analyses. Here is a `tree` listing of all the files and folders.
+Folder names correspond to a NMDC specific id (For example `nmdc:mga00p32/`), within each folder there are specific subfolders (`qa`, `MAGs`, `ReadbasedAnalysis`, `annotation`, `assembly`) associated with analyses. Here is an example `tree` listing of all the files and folders for project id `nmdc:mga0ke75`.
 
 ```
 .
