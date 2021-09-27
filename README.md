@@ -3,7 +3,7 @@
 This repo contains information for metagenome datasets to be used in **Petabyte Scale Sequence Search: Metagenomics Benchmarking Codeathon** held on Sept. 27-Oct. 1. Included metagenomes are from three different environments (human gut, marine, and soil). Details of each dataset (e.g. SRR, SRX ids, etc. when available) and their location in GCP and AWS bucket can be found in `data.tsv`.
 
 # Data processing
-Raw files (*.sra) were obtained from sra using `sratoolkit` with following command:
+Raw files (*.sra) were obtained from sra using [`sratoolkit`](https://github.com/ncbi/sra-tools) with following command:
 
 ```
 prefetch $SRR
