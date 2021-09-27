@@ -84,4 +84,4 @@ nmdc:mga0qa91	SRP190865	SRX5636923	SRS4582662	SRR8849251	408170	human gut metage
 nmdc:mga0ky27	SRP190865	SRX5636964	SRS4582703	SRR8849210	408170	human gut metagenome	gs://psss-metagenomics-codeathon-data/gut/nmdc:mga0ky27
 nmdc:mga0x709	SRP190865	SRX5636903	SRS4582642	SRR8849271	408170	human gut metagenome	gs://psss-metagenomics-codeathon-data/gut/nmdc:mga0x709
 nmdc:mga0w514	SRP278138	SRX8973964	SRS7229557	SRR12479933	408172	marine metagenome	gs://psss-metagenomics-codeathon-data/marine/nmdc:mga0w514
-1781_100342	SRX9603516	SRX9603516	SRS7807226	SRR13164630	556182	freshwater sediment metagenome	gs://psss-metagenomics-codeathon-data/soil/1781_100342
+1781_100342	SRP287689	SRX9603516	SRS7807226	SRR13164630	556182	freshwater sediment metagenome	gs://psss-metagenomics-codeathon-data/soil/1781_100342
